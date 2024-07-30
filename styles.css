@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+:root {
+  /* COLORS */
+  --rose-50: hsl(330, 100%, 98%);
+  --rose-800: hsl(332, 51%, 32%);
+
+  --stone-100: hsl(30, 54%, 90%);
+  --stone-150: hsl(30, 18%, 87%);
+  --stone-600: hsl(30, 10%, 34%);
+  --stone-900: hsl(24, 5%, 18%);
+
+  --brown-800: hsl(14, 45%, 36%);
+
+  /* SPACING */
+  --1600: 128px;
+  --600: 48px;
+  --500: 40px;
+  --400: 32px;
+  --300: 24px;
+  --200: 16px;
+  --150: 12px;
+  --100: 8px;
+
+  /* FONT SIZES */
+  --text-preset-1: 2.5rem;
+  --text-preset-2: 1.75rem;
+  --text-preset-3: 1.25rem;
+  --text-preset-4: 1rem;
+
+  --text-preset-mobile: 2.25;
+
+  /* FONT FAMILY */
+  --serif: "Young Serif", serif;
+  --outfit: "Outfit", sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: var(--stone-100);
+  font-family: var(--serif);
+}
+
+.card {
+  width: 736px;
+  padding: var(--500);
+  background-color: white;
+  border-radius: var(--300);
+  margin-bottom: var(--1600);
+  margin-top: var(--1600);
+}
+
+img {
+  width: 100%;
+  border-radius: var(--150);
+}
+
+/* MOBILE CARD */
+@media (max-width: 736px) {
+  .card {
+    width: 100vw;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .recipe-header h1 {
+    font-size: var(--text-preset-mobile);
+  }
+}
+
+/* TABLET CARD */
+@media (min-width: 736px) and(max-width: 1024px) {
+  .card {
+    width: 500px;
+  }
+}
+
+.recipe-header h1 {
+  font-size: var(--text-preset-1);
+  color: var(--stone-900);
+  margin-bottom: 0;
+}
+
+.recipe-header p,
+.nutrition p,
+.preperation-list li,
+.ingredients-list li,
+.instructions-list li,
+td {
+  font-family: var(--outfit);
+  line-height: 150%;
+  color: var(--stone-600);
+  font-size: var(--text-preset-4);
+}
+
+.preperation {
+  background-color: var(--rose-50);
+  padding: var(--300);
+  border-radius: var(--150);
+  margin-bottom: var(--400);
+}
+
+.preperation h2 {
+  font-family: var(--outfit);
+  font-size: var(--text-preset-3);
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: var(--100);
+  color: var(--rose-800);
+}
+
+.preperation-list {
+  margin: 0;
+  font-weight: normal;
+  font-family: var(--outfit);
+}
+
+.bold-emphasis,
+td:last-child {
+  font-weight: 700;
+}
+
+hr,
+.ingredients,
+.instructions,
+.recipe-header p {
+  margin-bottom: var(--400);
+}
+
+.ingredients h2,
+.instructions h2,
+.nutrition h2 {
+  font-size: var(--text-preset-2);
+  font-weight: normal;
+  color: var(--brown-800);
+  margin: 0;
+}
+
+.ingredients-list li,
+.instructions-list li,
+.preperation-list li {
+  padding: var(--100);
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--stone-150);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: var(--150);
+  padding-left: var(--400);
+}
+
+tr {
+  border-bottom: 1px solid var(--stone-150);
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+td:first-child {
+  width: 42%;
+}
